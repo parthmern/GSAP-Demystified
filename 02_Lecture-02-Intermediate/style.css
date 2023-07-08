@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "akira",sans-serif;
+}
+
+@font-face {
+    font-family: akira;
+    src: url(./fonts/akira_expanded_demo-webfont.woff);
+}
+
+#wrapper{
+    width: 100%;
+    height: 100vh;
+}
+
+.loader{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    overflow: hidden;
+    
+}
+
+.left{
+    margin-top: 10%;
+    font-size: 2rem;
+    color: white;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    font-size: 5rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2D142C;
+    font-size: 3rem;
+    background-color: #EE4540;
+}
+
+.project-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #510A32 ;
+    font-size: 3rem;
+    background-color: #C72C41;
+}
