@@ -29,3 +29,75 @@
 3. LETTERING CDN
 4. GSAP CDN
 5. JS script tag
+
+#### ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+#### ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+#### 📝 GSAP concepts understanding
+
+#### 1️⃣✔️ gsap.from(" `<CSS Selectors>` " , { `<changes that you want like css properties>` } );
+#### 📃 starting property changes
+```
+gsap.from(".nav1",{
+    color:"red",
+    duration: 5,
+    y:20
+})
+```
+
+Here in the starting for the 5 sec for NAVBAR 1 the font color is red and the direction on Y-axis is 20px for 5 sec
+And then after 5 sec it will get the original css attributes from `<style>` 
+
+#### 2️⃣✔️ gsap.to(" `<CSS Selectors>` " , { `<changes that you want like css properties>` } );
+#### 📃 Ending properties changes
+
+```
+gsap.to(".nav2",{
+    color:"white",
+    duration: 5
+})
+```
+
+Here in the starting all properties/attributes of NAVBAR 2 is same as the original css attributes from `<style>` And then the GSAP attributes will be changes according to the code
+
+#### ♻️ Some simple gsap properties `<changes that you want like css properties>`
+#### 📃 If you know the tailwind-Css then it is same as like tailwind
+```
+ color:"red" ,
+ duration: 5 ,
+ delay : 2 ,
+ y:20 ,
+ opacity :0 ,
+ overflow:"hidden" ,
+ scale : 3,
+
+```
+
+#### 3️⃣✔️ gsap.timeline() 
+#### timeline is the same like that this animation starts first then this animation starts and then this animation starts and then.....
+
+```
+let tl = gsap.timeline();
+
+tl
+   .from(".nav1",{
+        opacity :0,
+        y:20,
+        duration :3
+    })
+
+    .from(".nav2",{
+        opacity:0,
+        y:20,
+        duration:2
+    })
+
+    .to(".mainTxt",{
+        opacity:0,
+        scale : 3,
+        duration :2,
+        overflow:"hidden"
+    })
+  
+```
+
+Here first the animation of NAVBAR1 starts Then the animation of NAVBAR2 starts and Then the animation of MAINTXT starts
