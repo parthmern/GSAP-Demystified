@@ -3,7 +3,7 @@
 #### ♥ GSAP-CDN
 
 ```
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 ```
 #### 💛 JQUERY-CDN
 
@@ -23,6 +23,12 @@
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js" integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 ```
+
+#### 💚 SCROLLTRIGGER -CDN
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+```
+
 #### ⚠️ Maintain order in the end of `<body>` tag
 1. JQUERY CDN
 2. TEXTTILLATE CDN
@@ -45,7 +51,7 @@ gsap.from(".nav1",{
 ```
 
 Here in the starting for the 5 sec for NAVBAR 1 the font color is red and the direction on Y-axis is 20px for 5 sec
-And then after 5 sec it will get the original css attributes from `<style>` 
+And then after 5 sec it will get(move) the original postion with original css attributes from `<style>` 
 
 #### 2️⃣✔️ gsap.to(" `<CSS Selectors>` " , { `<changes that you want like css properties>` } );
 #### 📃 Ending properties changes
