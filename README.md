@@ -53,6 +53,7 @@ gsap.from(".nav1",{
 Here in the starting for the 5 sec for NAVBAR 1 the font color is red and the direction on Y-axis is 20px for 5 sec
 And then after 5 sec it will get(move) the original postion with original css attributes from `<style>` 
 
+#### 〰️ 〰️ 〰️ 〰️ 〰️ 〰️ 〰️ 〰️ 〰️ 〰️ 
 #### 2️⃣✔️ gsap.to(" `<CSS Selectors>` " , { `<changes that you want like css properties>` } );
 #### 📃 Ending properties changes
 
@@ -77,7 +78,7 @@ Here in the starting all properties/attributes of NAVBAR 2 is same as the origin
  scale : 3,
 
 ```
-
+#### 〰️ 〰️ 〰️ 〰️ 〰️ 〰️ 〰️ 〰️ 〰️ 〰️ 
 #### 3️⃣✔️ gsap.timeline() 
 #### timeline is the same like that this animation starts first then this animation starts and then this animation starts and then.....
 
@@ -107,3 +108,70 @@ tl
 ```
 
 Here first the animation of NAVBAR1 starts Then the animation of NAVBAR2 starts and Then the animation of MAINTXT starts
+
+#### ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+#### ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+
+#### 4️⃣✔️ TEXTTILLATE
+#### Add best IN and OUT aniamtions in text
+#### Refer this [click me](https://github.com/jschr/textillate)
+```
+let tl = gsap.timeline();
+
+tl
+    .from(".lowest",{
+        
+    onStart : function(){
+        $('.lowest').textillate({ 
+                                    in: { 
+                                        effect: 'fadeInUp',
+
+                                        // OUT bhi karna hai toh CALLBACKFUNCTION use karna padega
+                                        callback : function()
+                                        {
+                                            $('.lowest').textillate('out')
+                                        }
+
+                                        } , 
+
+                                    out:{
+                                        effect: 'fadeOutUp'
+                                        } 
+                                });
+    }
+    })
+```
+
+#### ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+#### ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+#### 5️⃣✔️ SCROLLTRIGGER
+#### some animations happen with SCROLLING on webpage like rotating,moving
+
+```
+gsap.to(".section2 img",{
+    scrollTrigger :  {
+        trigger : ".section2 img",
+        // we are scrolling on BODY so
+        scroller : "body",
+        markers : true,
+        start : "top 80%",
+        end : "bottom 10%",
+        // scrub matlab scrolling k saath saath animation hoga
+        // scrub : true
+        // scrub : value(1-5) then wo smoothness add karega in animation while scrolling
+        scrub : 5,
+        //pin : true ---matlab wo scroll-start hoga tab jaha hoga waha PINNED rahega and scroll-end hote he UNPINNED ho jayega
+        pin:true ,
+        // pinSpacing : true
+    },
+    rotate : 360,
+    duration : 2
+})
+```
+
+➔ Here we are targeting IMG and we are scrolling on body so `scroller : "body"`  <br /> 
+➔ then ` markers : true` meaning there is markers that you can see on screen and by using them you can decide from when the scrollTrigger will start and from where the scrollTrigger will end  <br /> 
+➔ we can also set the MARKRS using `start : "top 80%"` and `end : "bottom 10%"` which are the start-scrollTrigger and end-scrollTrigger <br /> 
+➔ `scrub : true` meaning the animation happens with with your scrolling like you scrool one time then some animation happens then again same <br /> 
+➔ `pin : true ` meaning the PINNED particular selected item when start-scrollTrigger and it will unpinned when end-scrollTrigger <br /> 
+
